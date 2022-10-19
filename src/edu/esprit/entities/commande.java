@@ -16,9 +16,6 @@ public class commande {
     private int Quantite;
     private int Prix;
     private String Image;
-
-    public commande() {
-    }
     
 
     public commande(int Id_comd, String Nom_Prod, int Quantite, int Prix, String Image) {
@@ -34,6 +31,10 @@ public class commande {
         this.Quantite = Quantite;
         this.Prix = Prix;
         this.Image = Image;
+    }
+
+    public commande() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getId_comd() {
