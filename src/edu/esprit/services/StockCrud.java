@@ -122,6 +122,24 @@ public List<Stock> afficherStock(){
         }
        
    }
+     public List FindById(int id) {
+        List<Stock> list = new ArrayList<>();
+        String requette5 = "SELECT  `nom_produit`,`quantite_produit`, `image_produit`, `prix_produit` From `Stock` WHERE id_produit= '" + id + "' ";
+
+        try {
+            Statement st = new MyConnection().getCnx().createStatement();
+            rs = st.executeQuery(requette5);
+            while (rs.next()) {
+                Stock s = new Stock(rs.getString("nom_produit"), rs.getInt("quantite_produit"), rs.getString("image_produit"), rs.getInt("prix_produit"));
+                list.add(s);
+            }
+            System.out.println("Stock trouvée avec succées !");
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+        return list;
+    }  
 
     
 
