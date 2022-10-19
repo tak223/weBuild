@@ -32,13 +32,20 @@ public class MainClass {
     //commandeCrud Ccd = new commandeCrud();
     //commande c = new commande("SPASFON",6,30,"Image_SPASFON");
     
-    FactureCrud Fcd = new FactureCrud();
-    Facture_Ph F = new Facture_Ph(4004);
+   FactureCrud Fcd = new FactureCrud();
+    Facture_Ph F = new Facture_Ph();
     
+      //System.out.println( Fcd.FindById(6).toString());
+    
+    ////////////////AJOUT FACTURE/////////////
     
     //Fcd.ajouterFacture();
     
+    ////////////////AJOUT COMMANDE/////////////
+    
     //Ccd.ajouterCommande();
+    
+    
     
    // System.out.println(Scd.afficherStock());
    
@@ -52,7 +59,7 @@ public class MainClass {
     
     //Ccd.modifierCommande(c,4);
     
-    //Fcd.modifierFacture(F,4);
+    Fcd.modifierFacture(F,6);
     
     
     
@@ -62,12 +69,16 @@ public class MainClass {
     //List list= Ccd.FindCommandeById(7);
     //System.out.println(list);
     
-    //List list= Fcd.FindFactureById(7);
+    //List list= Fcd.FindFactureById(23);
     //System.out.println(list);
     
     //Scd.delete(1);
     //Ccd.deleteCommande(1);
-    Fcd.deleteFacture(10);
+    //Fcd.deleteFacture(7);
+    
+   //FactureCrud Fcd = new FactureCrud();
+    //Facture_Ph F = new Facture_Ph();
+      
     }
     
 }
